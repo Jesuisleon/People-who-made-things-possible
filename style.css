@@ -43,11 +43,12 @@ h2 {
     margin: var(--spacing-2) 0 0;
 }
 
+
 p {
     margin: 0;
 }
 
-button {
+/* button {
     width: 60%;
     height: 2rem;
     border-radius: 0.6rem;
@@ -58,14 +59,14 @@ button {
     color: var(--dark);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     border: none;
-}
+} */
 
 
 /* ----------- HEADER / NAVBAR ---------- */
 
-header {
+/* header {
     height: var(--height-header);
-}
+} */
 
 
 /* ----------- SECTION INTRO ---------- */
@@ -96,10 +97,10 @@ section.intro-section {
 
 section {
     padding: 0 var(--spacing-4);
-    min-height: 100vh;
+    min-height: 680px;
     height: fit-content;
-    display: grid;
-    grid-template-rows: var(--height-header) 1fr 1.5fr var(--height-header);
+    padding-top: 110px;
+    box-sizing:border-box;
 }
 
 section:nth-of-type(even) {
@@ -108,7 +109,6 @@ section:nth-of-type(even) {
 
 section .image-container {
     max-width: 20vh;
-    grid-row: 2 / 3;
     display: flex;
     align-items: end;
 }
@@ -118,13 +118,14 @@ section .image-container img {
     height: auto;
 }
 
-.resume-container {
-    grid-row: 3 / 4;
-}
 
 .resume-container p {
     margin: var(--spacing-2) 0;
     line-height: 1.2rem;
+     
+}
+.resume-container {
+    padding-bottom: var(--spacing-4);
 }
 
 p.date {
@@ -133,10 +134,73 @@ p.date {
 }
 
 .extra-content {
-    grid-row: 4 / 5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------- BUTTON CONTENT ---------- */
+
+input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+button {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 60%;
+    margin: var(--spacing-4) auto;
+    height: 2rem;
+    border-radius: 0.6rem;
+    font-size: var(--size-text-button);
+    font-family: var(--font-text);
+     background-color: var(--primary-color);
+    color: var(--dark);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    border: none;
+    transition: ease-in-out .5s;
+}
+.button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin: var(--spacing-4) auto;
+        height: 2rem;
+        border-radius: 0.6rem;
+        font-size: var(--size-text-button);
+        font-family: var(--font-text);
+        background-color: var(--primary-color);
+        color: var(--dark);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+        border: none;
+        transition: ease-in-out .5s;      
+}
+
+input[type="checkbox"]:checked ~ .button {
+    background-color: var(--dark);
+    color: var(--light-even);
 }
 
 
+label::after {
+    content: "EN SAVOIR PLUS";
+}
+
+input[type="checkbox"]:checked ~ label::after {
+    content: "LIRE MOINS";
+}
+
+article {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .7s ease;
+}
+
+input[type="checkbox"]:checked ~ article {
+    max-height: 1000px;
+
+}
+ 

@@ -1,0 +1,51 @@
+.content {
+    background: #f3f2f1;
+    width: 375px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+
+input[type="checkbox"] + label {
+    cursor: pointer;
+    background: #D1BFC9;
+    padding: 10px;
+    width: 150px;
+    border-radius: 3px;
+    padding: 8px 10px;
+    transition: 1s ease;
+}
+
+
+
+label::before {
+    content: "EN SAVOIR PLUS";
+}
+
+
+input[type="checkbox"]:checked + label::after {
+    content: "CLOSE ";
+}
+
+/* input[type="checkbox"]:checked~h2 label::before {
+    border-left: 8px solid transparent;
+    border-top: 8px solid black;
+    border-right: 8px solid transparent;
+    margin-left: -4px;
+    margin-top: -4px;
+} */
+
+article {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease;
+
+}
+
+input[type="checkbox"]:checked~h2~article {
+    max-height: 200px;
+}
