@@ -6,7 +6,8 @@
 }
 .light-mode {
     --navbar-color :black;
-    --navbar-bg-color:#EDDA90;
+    --navbar-bg-color:#D1BFC9
+    ;
 
 }
 /*light-mode {
@@ -21,6 +22,7 @@ outline: none;
 margin:0px;
 padding: 0px;
 }
+
 ul {
     list-style:none;
 }
@@ -45,46 +47,59 @@ ul {
 .menulink >a {
     text-decoration:none;
     color:var(--navbar-color);
-    font-family: ;
+    
 }
 .burger{
     display:none;
 }
 
-
+@media  screen and (max-width:768px){
 
 /* Mobile first */
-@media  screen and (max-width:7678.98px) {
     .menulinks{
         display:flex;
         flex-direction:column;
+        justify-content: center;
+        align-items: center;
         width:0;
         height:100vh;
-        top: 65px;
+        top: 0px;
         right:0;
         background:var(--navbar-bg-color);
         position:absolute;
-
+        
     }
+        
+   .menulink{
+    transform: translateX(101%);
+   }
+   .showmenu .menulink{
+    transform: translateX(0);
+   }     
+
+    
 .showmenu .menulinks{
  width:100%;
- transition:0.3s ease;
+ transition: 0.9s ease;
+
 }
 .menulink > a {
     display:block;
     padding:1rem;
     font-size:1.6rem;
-    transition: all .4s ease-in-out;
+    
 }
-.menulink > a:hover {
+
+/*.menulink > a:hover {
     padding-left:2rem;
     letter-spacing: 5px;
-}
+}*/
+
 /*Toggle menu */
 .burger {
     display:block;
     position:relative;
-    padding:10px;
+    padding:320px;
     width:45px;
     height:45px;
     border:none;
@@ -98,9 +113,8 @@ ul {
     background:var(--navbar-color);
     border-radius:3px;
     margin-right: 10px;
-    
-    
-    
+    transition: all .5s ease-in-out;
+       
 
 }
 .bar::before, .bar::after {
@@ -110,6 +124,7 @@ ul {
     position:absolute;
     background:var(--navbar-color);
     border-radius:3px;
+    transition: all .5s ease-in-out;
 }
 
 .bar::before{
@@ -118,7 +133,17 @@ transform:translateY(-12px);
 .bar::after{
     transform:translateY(12px);
     }
+.showmenu .bar:before{
+    transform:rotate(45deg);
 }
+.showmenu .bar:after{
+    transform:rotate(-45deg);
+}
+
+}
+    
+
+
 /* desktop , tablet */
 /*@media  screen and (min-width:768px){
     .menulink >a:after{
