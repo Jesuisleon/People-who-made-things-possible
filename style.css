@@ -11,6 +11,7 @@
 
     --size-h1: 2.6rem;
     --size-h2: 2.9rem;
+    --size-h3: 1rem;
     --size-text: 0.9rem;
     --size-text-button: 0.8rem;
 
@@ -41,6 +42,12 @@ h1 {
 h2 {
     font-size: var(--size-h2);
     margin: var(--spacing-2) 0 0;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: var(--size-text-button);
+    font-family: var(--font-text);
 }
 
 p {
@@ -135,8 +142,62 @@ p.date {
 .extra-content {
     grid-row: 4 / 5;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 
+/* ----------- BUTTON CONTENT ---------- */
+
+input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin: auto;
+        height: 2rem;
+        border-radius: 0.6rem;
+        font-size: var(--size-text-button);
+        font-family: var(--font-text);
+        background-color: var(--primary-color);
+        color: var(--dark);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+         border: none;      
+}
+
+
+label::before {
+    content: "EN SAVOIR PLUS";
+}
+
+
+input[type="checkbox"]:checked+label:after {
+    content: "CLOSE ";
+} 
+
+
+
+article {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease;
+
+}
+
+input[type="checkbox"]:checked~h3~article {
+    max-height: 200px;
+}
+
+
+input[type="checkbox"]:checked~h3 label::before {
+    border-left: 8px solid transparent;
+    border-top: 8px solid black;
+    border-right: 8px solid transparent;
+    margin-left: -4px;
+    margin-top: -4px;
+}
