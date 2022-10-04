@@ -108,6 +108,7 @@ p {
 
 .animated-title>div.text-top {
     height: 100px;
+    width: 220px;
     border-bottom: .5vmin solid var(--light-even);
     top: 0;
 }
