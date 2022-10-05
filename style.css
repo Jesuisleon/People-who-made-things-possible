@@ -203,9 +203,10 @@ ul.menulinks {
 /* ----------- SECTION INTRO ---------- */
 
 
-.intro-section {
+section.intro-section {
     padding-bottom: var(--spacing-4);
     z-index: 0;
+    height: 100vh;
 }
 
 .intro-section .title-container {
