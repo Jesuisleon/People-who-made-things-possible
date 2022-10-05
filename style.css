@@ -95,11 +95,10 @@ header {
 
 ul.menulinks {
     list-style: none;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 0%;
         height: 100vh;
         top: 0px;
         right: 0px;
@@ -121,6 +120,7 @@ ul.menulinks {
         transition: .5s ease;
         background: var(--primary-color);
         margin: 0;
+        display: flex;
     }
 
     .menulink>a {
