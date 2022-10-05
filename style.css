@@ -1,4 +1,9 @@
 /* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=IM+Fell+English&display=swap');
+
+/*font-family: 'Arbutus Slab', serif;*/
+/*font-family: 'IM Fell English', serif;*/
+
 
 /* Variables-Pseudo class */
 :root{
@@ -6,8 +11,7 @@
 }
 .light-mode {
     --navbar-color :black;
-    --navbar-bg-color:#D1BFC9
-    ;
+    --navbar-bg-color:#D1BFC9;
 
 }
 /*light-mode {
@@ -84,7 +88,7 @@ ul {
 
 }
 .menulink > a {
-    display:block;
+    display:flex;
     padding:1rem;
     font-size:1.6rem;
     
