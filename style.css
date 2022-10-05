@@ -118,10 +118,10 @@ section .image-container img {
     height: auto;
 }
 
-
 .resume-container p {
     margin: var(--spacing-2) 0;
-    line-height: 1.2rem;
+    line-height: 1.3rem;
+   
      
 }
 .resume-container {
@@ -137,7 +137,13 @@ p.date {
     display: flex;
     flex-direction: column;
 }
+.article-content {
+    line-height: 1.3rem;
+}
 
+.article-content p {
+    padding: var(--spacing) 0;
+}
 /* ----------- BUTTON CONTENT ---------- */
 
 input[type="checkbox"] {
@@ -156,34 +162,33 @@ button {
     border-radius: 0.6rem;
     font-size: var(--size-text-button);
     font-family: var(--font-text);
-     background-color: var(--primary-color);
+    background-color: var(--primary-color);
     color: var(--dark);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     border: none;
     transition: ease-in-out .5s;
 }
 .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60%;
-        margin: var(--spacing-4) auto;
-        height: 2rem;
-        border-radius: 0.6rem;
-        font-size: var(--size-text-button);
-        font-family: var(--font-text);
-        background-color: var(--primary-color);
-        color: var(--dark);
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
-        border: none;
-        transition: ease-in-out .5s;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: var(--spacing-4) auto;
+    height: 2rem;
+    border-radius: 0.6rem;
+    font-size: var(--size-text-button);
+    font-family: var(--font-text);
+    background-color: var(--primary-color);
+    color: var(--dark);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    border: none;
+    transition: ease-in-out .5s;      
 }
 
 input[type="checkbox"]:checked ~ .button {
     background-color: var(--dark);
     color: var(--light-even);
 }
-
 
 label::after {
     content: "EN SAVOIR PLUS";
@@ -200,7 +205,6 @@ article {
 }
 
 input[type="checkbox"]:checked ~ article {
-    max-height: 1000px;
-
+    max-height: 2000px;
 }
  
