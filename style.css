@@ -349,27 +349,11 @@ input[type="checkbox"] {
     position: absolute;
 }
 
-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    margin: var(--spacing-4) auto;
-    height: 2rem;
-    border-radius: 0.6rem;
-    font-size: var(--size-text-button);
-    font-family: var(--font-text);
-    background-color: var(--primary-color);
-    color: var(--dark);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
-    border: none;
-    transition: ease-in-out .5s;
-}
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 200px;
     margin: var(--spacing-4) auto;
     height: 2rem;
     border-radius: 0.6rem;
