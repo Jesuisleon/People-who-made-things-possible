@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=IM+Fell+English&display=swap');
 
@@ -158,3 +159,211 @@ transform:translateY(-12px);
         background:var(--navbar-bg-color) ;
     }
 }*/
+=======
+:root {
+    --primary-color: #D1BFC9;
+    --light-odd: #F3F2F1;
+    --light-even: #e1e1e1;
+    --dark: #2E4036;
+
+    --spacing: 0.5rem;
+    --spacing-2: calc(var(--spacing) * 2);
+    --spacing-3: calc(var(--spacing) * 3);
+    --spacing-4: calc(var(--spacing) * 4);
+
+    --size-h1: 2.6rem;
+    --size-h2: 2.9rem;
+    --size-text: 0.9rem;
+    --size-text-button: 0.8rem;
+
+    --font-title:'IM Fell English', serif;
+    --font-text: 'Arbutus Slab', serif;
+
+    --height-header: calc(var(--spacing-4)*3);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-text);
+    font-size: var(--size-text);
+    color: var(--dark);
+    background-color: var(--light-odd);
+}
+
+h1, h2 {
+    font-family: var(--font-title);
+}
+
+h1 {
+    font-size: var(--size-h1);
+    margin: var(--spacing-2) 0;
+}
+
+h2 {
+    font-size: var(--size-h2);
+    margin: var(--spacing-2) 0 0;
+}
+
+
+p {
+    margin: 0;
+}
+
+/* button {
+    width: 60%;
+    height: 2rem;
+    border-radius: 0.6rem;
+    text-transform: uppercase;
+    font-size: var(--size-text-button);
+    font-family: var(--font-text);
+    background-color: var(--primary-color);
+    color: var(--dark);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    border: none;
+} */
+
+
+/* ----------- HEADER / NAVBAR ---------- */
+
+/* header {
+    height: var(--height-header);
+} */
+
+
+/* ----------- SECTION INTRO ---------- */
+
+section.intro-section {
+    height: calc(100vh - var(--height-header));
+    min-height: auto;
+    display: grid;
+    grid-template-rows: 1fr var(--height-header);
+}
+
+.intro-section .title-container {
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-section .button-container {
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ----------- SECTIONS CONTENT ---------- */
+
+section {
+    padding: 0 var(--spacing-4);
+    min-height: 680px;
+    height: fit-content;
+    padding-top: 110px;
+    box-sizing:border-box;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--light-even);
+}
+
+section .image-container {
+    max-width: 20vh;
+    display: flex;
+    align-items: end;
+}
+
+section .image-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+.resume-container p {
+    margin: var(--spacing-2) 0;
+    line-height: 1.2rem;
+     
+}
+.resume-container {
+    padding-bottom: var(--spacing-4);
+}
+
+p.date {
+    font-size: calc(var(--size-text)*1.3);
+    margin: 0;
+}
+
+.extra-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------- BUTTON CONTENT ---------- */
+
+input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: var(--spacing-4) auto;
+    height: 2rem;
+    border-radius: 0.6rem;
+    font-size: var(--size-text-button);
+    font-family: var(--font-text);
+     background-color: var(--primary-color);
+    color: var(--dark);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    border: none;
+    transition: ease-in-out .5s;
+}
+.button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin: var(--spacing-4) auto;
+        height: 2rem;
+        border-radius: 0.6rem;
+        font-size: var(--size-text-button);
+        font-family: var(--font-text);
+        background-color: var(--primary-color);
+        color: var(--dark);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+        border: none;
+        transition: ease-in-out .5s;      
+}
+
+input[type="checkbox"]:checked ~ .button {
+    background-color: var(--dark);
+    color: var(--light-even);
+}
+
+
+label::after {
+    content: "EN SAVOIR PLUS";
+}
+
+input[type="checkbox"]:checked ~ label::after {
+    content: "LIRE MOINS";
+}
+
+article {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .7s ease;
+}
+
+input[type="checkbox"]:checked ~ article {
+    max-height: 1000px;
+
+}
+ 
+>>>>>>> 64da06b15af8b2ed3257e41401b24bbc2edb4fad
