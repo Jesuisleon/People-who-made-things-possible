@@ -56,11 +56,14 @@ h2 {
     font-size: var(--size-h2);
     margin: var(--spacing-2) 0 0;
 }
-
-
 p {
     margin: 0;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 /* ----------- HEADER / NAVBAR ---------- */
 
@@ -305,6 +308,12 @@ section {
     padding-top: 110px;
     box-sizing:border-box;
 }
+@media screen and (min-width: 768px) {
+    section {
+        padding-left:  10rem;
+        padding-right: 10rem;
+    }  
+}
 
 section:nth-of-type(even) {
     background-color: var(--light-even);
@@ -323,9 +332,7 @@ section .image-container img {
 
 .resume-container p {
     margin: var(--spacing-2) 0;
-    line-height: 1.3rem;
-   
-     
+    line-height: 1.3rem;  
 }
 .resume-container {
     padding-bottom: var(--spacing-4);
@@ -370,19 +377,32 @@ input[type="checkbox"] {
     color: var(--dark);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     border: none;
-    transition: ease-in-out .5s;      
+    cursor: pointer;
+    transition: ease-in-out .5s; 
+    display: flex;   
+    justify-content: center;
+    align-items: center;
 }
+.button a:hover {
+    color: var(--light-even);
+    cursor: pointer;
+}
+.button:hover {
+    background-color: var(--dark);
+}
+/*.button a {
+    width: 100%;
+    height: 100%;
+}*/
 
 input[type="checkbox"]:checked ~ .button {
     background-color: var(--dark);
     color: var(--light-even);
 }
-
-
 article {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .7s ease;
+    transition: max-height 0.4s;
 }
 
 input[type="checkbox"]:checked ~ article {
