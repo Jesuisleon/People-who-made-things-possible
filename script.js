@@ -4,7 +4,7 @@ function toggleButton(value) {
     if (value.checked) {
         label.innerText = "LIRE MOINS";
     } else {
-        label.innerText = "EN SAVOIR PLUS";
+        label.innerText = "LIRE PLUS";
     }
 }
 
@@ -19,3 +19,8 @@ function toggleMenu(){
     
 }
 toggleMenu();
+
+function toggleLink(){
+    const navbar = document.querySelector(`.navbar`);
+    navbar.classList.remove("showmenu");
+}
