@@ -20,11 +20,11 @@
         <nav class="navbar light-mode" role=" navigation">
             <!-- <div class="logonavbar">Logo</div> -->
             <ul class="menulinks">
-                <li class="menulink"><a href="#">ACCUEIL</a></li>
-                <li class="menulink"><a href="#">GEORGE BOOLE</a></li>
-                <li class="menulink"><a href="#">ADA LOVELACE</a></li>
-                <li class="menulink"><a href="#">GRACE HOPPER</a></li>
-                <li class="menulink"><a href="#">ALAN TURING</a></li>
+                <li class="menulink" ><a href="#" onclick="toggleLink()">ACCUEIL</a></li>
+                <li class="menulink" ><a href="#" onclick="toggleLink()">GEORGE BOOLE</a></li>
+                <li class="menulink" ><a href="#" onclick="toggleLink()">ADA LOVELACE</a></li>
+                <li class="menulink" ><a href="#" onclick="toggleLink()">GRACE HOPPER</a></li>
+                <li class="menulink" ><a href="#" onclick="toggleLink()">ALAN TURING</a></li>
             </ul>
             <div class="burger">
                 <span class="bar"></span>
@@ -49,8 +49,7 @@
                         </div>
                     </div>
                     <div class="subtitle">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni veritatis facere recusandae quisquam
-                            aliquid laboriosam. </p>
+                        <p>Découvrez des femmes et des hommes qui ont mis leur savoir au service du développement de l'informatique.</p>
                     </div>              
             <div class="button">DÉCOUVREZ-LES</div>
             </div>
@@ -60,13 +59,13 @@
                 <img src="img/george_boole_r.png" alt="Portrait de George Boole">
             </div>
             <div class="resume-container">
+                <input type="checkbox" id="georgeboole_content" name="georgeboole_content" onclick="toggleButton(this);">
                 <h2>George Boole</h2>
                 <p class="date">1815 - 1864</p>
+                <article class="article-content">
 
                 <p>George Boole est un logicien, mathématicien et philosophe britannique. Il est le créateur de la logique moderne, fondée sur une structure algébrique et sémantique, que l'on appelle algèbre de Boole en son honneur. Il est donc à l'origine de la création des valeurs booléennes "true" et "false".</p>
             
-            <input type="checkbox" id="georgeboole_content" name="georgeboole_content" onclick="toggleButton(this);">
-            <article class="article-content">
                 <h3>Biographie:</h3>
                 <p>Né le 2 Novembre 1815 et mort le 8 décembre 1864, il est un logicien, mathématicien et philosophe britannique. Il est le créateur de l’algèbre de Boole.  Il crée également une algèbre binaire, dite booléenne, n'acceptant que deux valeurs numériques : 0 et 1. Cette algèbre aura de nombreuses applications en téléphonie et en informatique.
                 George Boole accorde très tôt beaucoup d’attention à l’arithmétique et à la résolution de problèmes de mesures. Il crée une école à Lincoln, au sein de laquelle il donne des cours d’arithmétiques, de sciences et de culture classique. 
@@ -99,16 +98,16 @@
                 <img src="img/ada_lovelace_rond.png" alt="Portrait d'Ada Lovelace">
             </div>
             <div class="resume-container">
+                <input type="checkbox" id="adalovelace_content" name="adalovelace_content" onclick="toggleButton(this);">
                 <h2>Ada Lovelace</h2>
                 <p class="date">1815 - 1852</p>
+                <article class="article-content">
                 <p>Ada Lovelace est une pionnière des sciences informatiques.
                     Elle est principalement connue pour avoir réalisé le premier véritable programme informatique, lors
                     de son travail sur un ancêtre de l'ordinateur : la machine analytique de Charles Babbage. Dans ses
                     notes, on trouve en effet le premier programme publié, destiné à être exécuté par une machine, ce
                     qui fait d'Ada Lovelace la première programmeuse du monde.
                 </p>
-            <input type="checkbox" id="adalovelace_content" name="adalovelace_content" onclick="toggleButton(this);">
-            <article class="article-content">
                 <h3>Biographie:</h3>
                 <p>Fille d'un poète britannique (lord Byron) et d'une amatrice de mathématiques (Anne Isabella Milbanke), Ada témoigne, comme sa mère, d'un grand intérêt pour les mathématiques. Elle fut la première programmatrice informatique, et a également entrevu certaines possibilités offertes par les calculateurs universels.
                 En 1832, Ada rencontre Mary Somerville, éminente chercheuse et autrice scientifique du XIXe siècle, qui l'encourage et l'aide à progresser en mathématiques.
@@ -136,16 +135,16 @@
                 <img src="img/grace_hopper_r.png" alt="Photo de Grace Hopper">
             </div>
             <div class="resume-container">
+                <input type="checkbox" id="gracehopper_content" name="gracehopper_content" onclick="toggleButton(this);">
                 <h2>Grace Hopper</h2>
                 <p class="date">1906 - 1992</p>
+                <article class="article-content">
                 <p>Grace Hopper est la créatrice du langage Cobol et la conceptrice du premier compilateur en 1951. Elle
                     fut également l’une des nombreuses femmes qui s’engagea dans l’armée américaine durant la seconde
                     guerre mondiale, dans l’unité uniquement féminine WAVES (Women Accepted for Volunteer Emergency
                     Service). Ces femmes étaient appelés les « ordinateurs humains » et étaient en charge, pendant que
                     les hommes étaient au front, d’étudier en particulier des trajectoires balistiques.
                 </p>
-        <input type="checkbox" id="gracehopper_content" name="gracehopper_content" onclick="toggleButton(this);">
-        <article class="article-content">
             <h3>Biographie:</h3>
             <p>Grace Hopper étudie les mathématiques, la physique et l'économie au Vassar College, et en sort diplômée en 1928. En 1934, elle obtient un doctorat en mathématiques de l'université Yale.
             La jeune femme enseigne les mathématiques au Vassar College entre 1931 et 1944. Elle épouse en 1930 Vincent Hopper, un professeur de littérature, mais ils divorcent en 1945.
@@ -177,8 +176,10 @@
                 <img src="img/alan_turing_r.png" alt="Portrait d'Alan Turing">
             </div>
             <div class="resume-container">
+                <input type="checkbox" id="alanturing_content" name="alanturing_content" onclick="toggleButton(this);">
                 <h2>Alan Turing</h2>
                 <p class="date">1912 – 1954</p>
+                <article class="article-content">
                 <p> Alan Turing est un mathématicien et cryptologue britannique, auteur de travaux qui fondent
                     scientifiquement l'informatique.
                     Pendant la Seconde Guerre mondiale, Turing contribue à l'effort allié, au sein du service
@@ -186,52 +187,6 @@
                     percer les codes secrets de la machine Enigma utilisée par la marine allemande pour communiquer avec
                     ses sous-marins.
                 </p>
-<<<<<<< HEAD
-                <input type="checkbox" id="alanturing_content">
-                <article class="article-content">
-                    Biographie : <br>
-                    Très tôt, le jeune Alan montre les signes de son génie. On raconte qu'il apprit seul à lire en trois
-                    semaines. De même, il montra une affinité précoce pour les chiffres et les énigmes.
-                    Après la guerre, il travaille sur un des tout premiers ordinateurs, puis contribue au débat sur la
-                    possibilité de l'intelligence artificielle, en proposant le test de Turing. Vers la fin de sa vie,
-                    il s'intéresse à des modèles de morphogenèse du vivant conduisant aux « structures de Turing».
-                    Poursuivi en justice en 1952 pour homosexualité, il choisit, pour éviter la prison, la castration
-                    chimique par prise d'œstrogènes. Il est retrouvé mort par empoisonnement au cyanure le 8 juin 1954
-                    dans la chambre de sa maison à Wilmslow. La reine Élisabeth II le reconnaît comme héros de guerre et
-                    lui accorde une grâce royale à titre posthume en 2013. <br>
-
-                    Travaux majeurs :<br>
-                    Après la guerre, Alan Turing peut enfin se consacrer à la matérialisation de la machine idéale
-                    conçue dans son article de 1936 sur “le Problème de la décision” posé par David Hilbert. Il s’agit
-                    de déterminer si un théorème peut être validé par une procédure qui est mécanique et automatique.
-                    Il crée ensuite ce qu’il appelle « la machine de Turing ». Cette machine de Turing, qui n’existe
-                    alors que sur papier, est ainsi une machine à calculer, soit un computer. Cette application
-                    visionnaire sera la base du développement informatique et du fonctionnement par algorithme.
-                    Au lendemain de la guerre, Alan Turing, entre au Laboratoire national de physique de Londres, où il
-                    rédige en trois mois le projet de construction d’un prototype d’Automatic Computing Engine (ACE).
-                    Mais alors que ces idées de jeunesse (il a conçu sa machine à 24 ans) se concrétisent enfin, Alan
-                    Turing se désintéresse de l’informatique. Son ambition se tourne alors vers un projet encore plus
-                    révolutionnaire. Il veut construire un équivalent du cerveau capable de penser et prêter une
-                    intelligence à des machines.
-                    En octobre 1950, Alan Turing publie l’article “L’ordinateur et l’intelligence” dans la revue
-                    philosophique Mind. Cet article, ainsi que les notes d’Ada Lovelace, sont aujourd’hui considérés
-                    comme posant les bases de l’intelligence artificielle. Le texte s’ouvre sur le jeu de l’imitation,
-                    dans lequel le chercheur imagine le moyen pour une machine de se faire passer pour un être humain.
-                    C’est ce qu’on appellera plus tard, le test de Turing. Il consiste à mettre un humain en face d’un
-                    autre humain et d’un ordinateur avec lesquels il échange à l’aveugle, via des messages textuels. Si
-                    le testeur n’est pas capable de dire lequel de ses interlocuteurs est un ordinateur, on peut
-                    considérer que l’ordinateur a passé avec succès le test.<br>
-                    A propos de lui : <br>
-                    Le film « The imitation game » retrace la vie d'Alan Turing
-                </article>
-                <div class="button"><label for="alanturing_content"></label> </div>
-            </div>
-        </section>
-    </main>
-    >>>>>>> 64da06b15af8b2ed3257e41401b24bbc2edb4fad
-=======
-            <input type="checkbox" id="alanturing_content" name="alanturing_content" onclick="toggleButton(this);">
-            <article class="article-content">
                 <h3>Biographie:</h3>
                 <p>Très tôt, le jeune Alan montre les signes de son génie. On raconte qu'il apprit seul à lire en trois semaines. De même, il montra une affinité précoce pour les chiffres et les énigmes.
                 </p>
@@ -260,7 +215,6 @@
             </div>
         </section>
     </main>
->>>>>>> animated_title
     <script src="script.js"> </script>
 </body>
 

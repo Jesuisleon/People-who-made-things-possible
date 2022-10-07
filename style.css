@@ -1,16 +1,3 @@
-/* 
-.light-mode {
-    --navbar-color :black;
-    --navbar-bg-color:#D1BFC9;
-
-} 
-.light-mode {
-    --navbar-color :black;
-    --navbar-bg-color:#EDDA90;
-
-} */
-
-
 :root {
     --primary-color: #D1BFC9;
     --light-odd: #F3F2F1;
@@ -33,6 +20,13 @@
     --height-header: calc(var(--spacing-4)*3);
 }
 
+@media screen and (min-width: 768px) {
+    :root {
+        --size-h1: 4.2rem;
+    }
+    
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -46,11 +40,19 @@ h1, h2 {
     font-family: var(--font-title);
 }
 
+
 h1 {
     font-size: var(--size-h1);
     margin: var(--spacing-2) 0;
     line-height: 50%;
 }
+
+@media screen and (min-width: 768px) {
+    h1 {
+        line-height: 90%;
+    }
+}
+
 
 h2 {
     font-size: var(--size-h2);
@@ -121,12 +123,6 @@ ul.menulinks {
 
     }
 
-    /*.menulink > a:hover {
-    padding-left:2rem;
-    letter-spacing: 5px;
-}*/
-
-    /*Toggle menu */
     .burger {
         width: 40px;
         height: var(--spacing-4);
@@ -170,11 +166,6 @@ ul.menulinks {
         transform: translateY(12px);
     }
 
-    /* .showmenu .bar {
-        width: 0;
-        background-color: transparent;
-    } */
-
     .showmenu .bar:before {
         transform: rotate(45deg);
     }
@@ -188,25 +179,17 @@ ul.menulinks {
     }
 
 
-/* desktop , tablet */
-/*@media  screen and (min-width:768px){
-    .menulink >a:after{
-        display:block;
-        content:"";
-        width: 0;
-        height:1px;
-        background:var(--navbar-bg-color) ;
-    }
-}*/
-
-
 /* ----------- SECTION INTRO ---------- */
 
 
 section.intro-section {
-    padding-bottom: var(--spacing-4);
+    /* padding-bottom: var(--spacing-4); */
     z-index: 0;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
 .intro-section .title-container {
@@ -214,6 +197,12 @@ section.intro-section {
     height: fit-content;
 }
 
+@media screen (min-width: 768px) {   
+}
+.intro-section .button {
+    margin-top: 150px;
+
+}
 
 /* ------- ANIMATED TITLE ------- */
 
@@ -254,8 +243,14 @@ section.intro-section {
 
 .animated-title>div.text-top {
     height: 100px;
-    width: 220px;
     top: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .animated-title>div.text-top {
+    height: 250px;
+    top: 0;
+} 
 }
 
 .animated-title>div.text-top div {
@@ -271,6 +266,13 @@ section.intro-section {
     bottom: 15px;
 }
 
+@media screen and (min-width: 768px) {
+    .animated-title>div.text-bottom {
+        height: 100px;
+    }
+}
+ 
+
 .animated-title>div.text-bottom div {
     animation: showBottomText 0.75s;
     animation-delay: 1.75s;
@@ -280,6 +282,7 @@ section.intro-section {
 }
 
 /* ----------- TITLE BUTTON CONTENT ---------- */
+
 button {
     display: flex;
     justify-content: center;
@@ -300,7 +303,7 @@ button {
 /* ----------- SECTIONS CONTENT ---------- */
 section {
     padding: 0 var(--spacing-4);
-    min-height: 300px;
+    height: 100vh;
     height: fit-content;
     padding-top: 110px;
     box-sizing:border-box;
@@ -373,6 +376,7 @@ input[type="checkbox"] {
     transition: ease-in-out .5s;      
 }
 
+
 input[type="checkbox"]:checked ~ .button {
     background-color: var(--dark);
     color: var(--light-even);
@@ -380,7 +384,7 @@ input[type="checkbox"]:checked ~ .button {
 
 
 article {
-    max-height: 0;
+    max-height: 45vh ;
     overflow: hidden;
     transition: max-height .7s ease;
 }

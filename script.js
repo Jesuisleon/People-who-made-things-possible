@@ -8,10 +8,10 @@ function toggleButton(value) {
     }
 }
 
+const navbar = document.querySelector('.navbar');
+const burger = document.querySelector('.burger');
 
-function toggleMenu(){
-    const navbar =document.querySelector('.navbar');
-    const burger = document.querySelector('.burger');
+function toggleMenu(){  
     burger.addEventListener('click' ,()=>{
         navbar.classList.toggle('showmenu');
         // navbar.style.backgroundColor = 'transparent';
@@ -19,3 +19,8 @@ function toggleMenu(){
     
 }
 toggleMenu();
+
+
+function toggleLink() {
+    navbar.classList.remove('showmenu');
+        }
