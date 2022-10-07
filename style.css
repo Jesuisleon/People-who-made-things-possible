@@ -19,13 +19,14 @@
 
     --height-header: calc(var(--spacing-4)*3);
 }
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
     :root {
-        --size-h1: 4.2rem;
-    }
-    
-}
+    --size-h1: 2.8rem;
+    --size-h2: 3.1rem;
+    --size-text: 1.2rem;
+    --size-text-button: 0.8rem; 
+    } 
+}  
 
 body {
     margin: 0;
@@ -58,11 +59,15 @@ h2 {
     font-size: var(--size-h2);
     margin: var(--spacing-2) 0 0;
 }
-
-
 p {
     margin: 0;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 /* ----------- HEADER / NAVBAR ---------- */
 
@@ -72,18 +77,43 @@ header {
     width: 100%;
     z-index: 5;
 }
+@media screen and (min-width: 768px) {
+    header {
+        background-color: var(--primary-color);
+        height: calc(var(--height-header)/2);
+    }
+}
 
 .navbar {
     height: 100%;
     color: var(--dark);
     position: relative;
 }
+@media screen and (min-width: 768px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+    }
+}
 
 .menulink>a {
     text-decoration: none;
     color: var(--dark);
+    display: flex;
+    padding: 1rem;
+    font-size: 1.6rem;
 }
-
+@media screen and (min-width: 768px){
+    .menulink>a {
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 768px){
+    li:hover>a {
+        color: var(--light-even);
+    }
+}
+    
 
 ul.menulinks {
     list-style: none;
@@ -97,9 +127,24 @@ ul.menulinks {
         position: absolute;
         margin: 0;
     }
+    @media screen and (min-width: 768px) {
+        ul.menulinks {
+            display: flex;
+            flex-direction: row;
+            height: auto ;
+            justify-content: center;
+            width: 100%;
+        }
+    }
 
     .menulink {
         transform: translateX(101%);
+    }
+
+    @media screen and (min-width: 768px) {
+        .menulink {
+            transform: none;
+        }
     }
 
     .showmenu .menulink {
@@ -116,13 +161,7 @@ ul.menulinks {
         z-index: 10;
     }
 
-    .menulink>a {
-        display: flex;
-        padding: 1rem;
-        font-size: 1.6rem;
-
-    }
-
+  
     .burger {
         width: 40px;
         height: var(--spacing-4);
@@ -133,6 +172,11 @@ ul.menulinks {
         float: right;
         margin: var(--spacing-4) var(--spacing-4) 0 0;
         z-index: 11;
+    }
+    @media screen and (min-width: 768px){
+        .burger {
+            display: none;
+        }
     }
 
     .bar {
@@ -155,7 +199,7 @@ ul.menulinks {
         position: absolute;
         background: var(--dark);
         border-radius: 3px;
-        transition: all .5s ease-in-out;
+        transition: all .3s ease-in-out;
     }
 
     .bar::before {
@@ -185,23 +229,23 @@ ul.menulinks {
 section.intro-section {
     /* padding-bottom: var(--spacing-4); */
     z-index: 0;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
 }
 
+
 .intro-section .title-container {
     position: relative;
     height: fit-content;
 }
 
-@media screen (min-width: 768px) {   
-}
-.intro-section .button {
-    margin-top: 150px;
 
+.intro-section .button {
+    margin-top: 55px;
 }
 
 /* ------- ANIMATED TITLE ------- */
@@ -248,7 +292,7 @@ section.intro-section {
 
 @media screen and (min-width: 768px) {
     .animated-title>div.text-top {
-    height: 250px;
+    height: 120px;
     top: 0;
 } 
 }
@@ -303,10 +347,16 @@ button {
 /* ----------- SECTIONS CONTENT ---------- */
 section {
     padding: 0 var(--spacing-4);
-    height: 100vh;
+    min-height: 100vh;
     height: fit-content;
     padding-top: 110px;
     box-sizing:border-box;
+}
+@media screen and (min-width: 768px) {
+    section {
+        padding-left:  10rem;
+        padding-right: 10rem;
+    }  
 }
 
 section:nth-of-type(even) {
@@ -326,9 +376,7 @@ section .image-container img {
 
 .resume-container p {
     margin: var(--spacing-2) 0;
-    line-height: 1.3rem;
-   
-     
+    line-height: 1.3rem;  
 }
 .resume-container {
     padding-bottom: var(--spacing-4);
@@ -373,20 +421,38 @@ input[type="checkbox"] {
     color: var(--dark);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     border: none;
-    transition: ease-in-out .5s;      
+    cursor: pointer;
+    transition: ease-in-out .3s; 
+    display: flex;   
+    justify-content: center;
+    align-items: center;
 }
+.button:hover a {
+    color: var(--light-even);
+}
+.button a:hover {
+    cursor: pointer;
+}
+.button:hover {
+    background-color: var(--dark);
+}
+.button:hover label {
+    cursor: pointer;
+}
+/*.button a {
+    width: 100%;
+    height: 100%;
+}*/
 
 
 input[type="checkbox"]:checked ~ .button {
     background-color: var(--dark);
     color: var(--light-even);
 }
-
-
 article {
-    max-height: 45vh ;
+    max-height: 24vh ;
     overflow: hidden;
-    transition: max-height .7s ease;
+    transition: max-height 0.4s;
 }
 
 input[type="checkbox"]:checked ~ article {
