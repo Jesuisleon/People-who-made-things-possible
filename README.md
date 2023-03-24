@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <h3 align="center">People who made things possible</h3>
+  <h1 align="center">People who made things possible</h1>
 
   <p align="center">
     Welcome to our website, where we showcase the trailblazers of the information age. From Ada Lovelace to Alan Turing, we delve into the stories of those who shaped the way we live, work, and communicate today. Join us on a journey through the history of computing and discover the pioneers who paved the way for the digital world we know today.
