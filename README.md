@@ -7,7 +7,6 @@
     <br/>
     <br/>
     <a href="https://github.com/Jesuisleon/People who made things possible">View Demo</a>
-    .
   </p>
 </p>
 
@@ -29,7 +28,9 @@ Love
 
 ## Authors
 
-* **Stéphanie** - [Stéphanie](https://github.com/Steph3146) - **
-* **Anaïs** - [Anaïs](https://github.com/curiouseagle) - **
+* **Stéphanie** - [Stéphanie](https://github.com/Steph3146)
+* **Anaïs** - [Anaïs](https://github.com/curiouseagle)
+* **Rosbain** - [Rosbain](https://github.com/russenbissemo)
+* **Léon** - [Léon](https://github.com/Jesuisleon)
 
 
