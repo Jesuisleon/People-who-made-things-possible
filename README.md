@@ -6,7 +6,7 @@
     Welcome to our website, where we showcase the trailblazers of the information age. From Ada Lovelace to Alan Turing, we delve into the stories of those who shaped the way we live, work, and communicate today. Join us on a journey through the history of computing and discover the pioneers who paved the way for the digital world we know today.
     <br/>
     <br/>
-    <a href="https://jesuisleon.github.io/People-who-made-things-possible/">View Demo</a>
+    <a href="https://jesuisleon.github.io/WCS-People-who-made-things-possible/">View Demo</a>
   </p>
 </p>
 
